@@ -12,12 +12,11 @@ Time Complexity: O(n) — each character is processed once
 Space Complexity: O(n) — in the worst case, all brackets are stored in the stack
 
 Ques-2
-Queue Problem — Implement Queue using Stacks
-Problem: [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/description/)
-Category: Queue
+Linked List Problem — Reverse Linked List
+Problem: [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/description/)
+Category: Linked List
 Approach:
-This problem is solved using two stacks — one (s1) for inserting elements and another (s2) for removing them in queue order (FIFO). When pop or peek operations are called, all elements from s1 are moved to s2 only if s2 is empty, ensuring the correct front element is always on top. This approach efficiently mimics queue behavior using stack operations.
+The problem is solved by iteratively reversing the next pointers of each node using two pointers — prev and curr. Initially, prev is set to NULL and curr points to the head of the list. For every node, the link is reversed so that it points to its previous node instead of the next one. By the end of the traversal, prev becomes the new head of the reversed linked list.
 Complexity:
-Time Complexity: O(1) amortized for push/pop
-Space Complexity: O(n) — for storing elements in the two stacks
-
+Time Complexity: O(n) — each node is visited once
+Space Complexity: O(1) — reversal is done in place without using extra memory
